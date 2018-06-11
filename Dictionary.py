@@ -6,8 +6,11 @@ import json
 data = json.load(open("Resources/data.json"))
 word = input("Enter a word: ")
 
-if word in data.keys():
-    listOfDef = data[word]
-    for definition in listOfDef:
-        print(definition)
-else: print("No such word found")
+def translate(w):
+    if word in data.keys():
+        listOfDef = data[w]
+        for definition in listOfDef:
+            print(definition)
+    else: print("No such word found")
+
+translate(word)
